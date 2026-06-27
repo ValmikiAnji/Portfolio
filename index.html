@@ -1,0 +1,1344 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Valmiki Anji | Photography & AI Photo Editing</title>
+
+<meta name="description" content="Professional Photography & AI Photo Editing Portfolio of Valmiki Anji">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
+}
+
+:root{
+
+--bg:#020617;
+--bg2:#0f172a;
+--card:rgba(255,255,255,.06);
+
+--cyan:#00E5FF;
+--gold:#FFD700;
+--pink:#FF4D8D;
+
+--white:#ffffff;
+--text:#cbd5e1;
+
+}
+
+body{
+
+background:var(--bg);
+color:white;
+overflow-x:hidden;
+
+}
+
+body::before{
+
+content:"";
+position:fixed;
+inset:0;
+
+background:
+
+radial-gradient(circle at top left,#00E5FF22,transparent 35%),
+radial-gradient(circle at bottom right,#FFD70022,transparent 35%),
+radial-gradient(circle at center,#FF4D8D22,transparent 45%);
+
+z-index:-2;
+
+}
+
+body::after{
+
+content:"";
+position:fixed;
+inset:0;
+backdrop-filter:blur(90px);
+z-index:-1;
+
+}
+
+header{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+
+display:flex;
+justify-content:space-between;
+align-items:center;
+
+padding:18px 8%;
+
+background:rgba(2,6,23,.75);
+backdrop-filter:blur(18px);
+
+border-bottom:1px solid rgba(255,255,255,.08);
+
+z-index:1000;
+
+}
+
+.logo{
+
+font-size:60px;
+font-weight:900;
+
+background:linear-gradient(90deg,var(--cyan),var(--gold),var(--pink));
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+letter-spacing:1px;
+
+}
+
+nav{
+
+display:flex;
+gap:20px;
+align-items:center;
+
+}
+
+nav a{
+
+color:white;
+text-decoration:none;
+font-weight:500;
+transition:.35s;
+
+}
+
+nav a:hover{
+
+color:var(--cyan);
+
+}
+
+section{
+
+padding:100px 8%;
+scroll-margin-top:80px;
+
+}
+
+/* HERO */
+
+.hero{
+
+min-height:75vh;
+
+display:flex;
+justify-content:center;
+align-items:center;
+
+text-align:center;
+
+}
+
+.hero-content{
+
+max-width:800px;
+
+}
+
+.hero h1{
+
+font-size:clamp(70px,11vw,125px);
+line-height:1.2;
+font-weight:800;
+
+}
+
+.hero h1 span{
+
+background:linear-gradient(90deg,var(--cyan),var(--gold));
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+.hero p{
+
+margin-top:30px;
+
+font-size:30px;
+line-height:1.9;
+
+color:var(--text);
+
+}
+
+.hero-buttons{
+
+margin-top:30px;
+
+display:flex;
+justify-content:center;
+gap:30px;
+flex-wrap:wrap;
+
+}
+
+.btn-primary,
+.btn-secondary{
+
+padding:16px 34px;
+border-radius:50px;
+
+font-weight:600;
+text-decoration:none;
+
+transition:.35s;
+
+}
+
+.btn-primary{
+
+background:linear-gradient(135deg,#00E5FF,#0077ff);
+
+color:white;
+
+}
+
+.btn-secondary{
+
+border:2px solid var(--gold);
+color:var(--gold);
+
+}
+
+.btn-primary:hover,
+.btn-secondary:hover{
+
+transform:translateY(-6px);
+
+}
+
+.hero-stats{
+
+display:flex;
+justify-content:center;
+gap:60px;
+
+margin-top:60px;
+
+flex-wrap:wrap;
+
+}
+
+.stat h2{
+
+font-size:42px;
+color:var(--gold);
+
+}
+
+.stat p{
+
+color:var(--text);
+
+}
+
+/* TITLES */
+
+.title{
+
+text-align:center;
+
+font-size:60px;
+margin-bottom:50px;
+
+background:linear-gradient(90deg,#ffffff,#FFD700);
+
+-webkit-background-clip:text;
+-webkit-text-fill-color:transparent;
+
+}
+
+/* CARDS */
+
+.card,
+.compare,
+.contact-card{
+
+background:var(--card);
+
+padding:25px;
+
+border-radius:20px;
+
+border:1px solid rgba(255,255,255,.08);
+
+backdrop-filter:blur(14px);
+
+transition:.4s;
+
+}
+
+.card:hover,
+.compare:hover,
+.contact-card:hover{
+
+transform:translateY(-6px);
+
+border-color:var(--cyan);
+
+box-shadow:0 15px 35px rgba(0,229,255,.15);
+
+}
+
+/* ABOUT */
+
+.about-container{
+
+display:grid;
+
+grid-template-columns:500px 1fr;
+
+gap:60px;
+
+
+}
+
+.about-image img{
+
+width:105%;
+border-radius:40px;
+
+box-shadow:0 25px 50px rgba(0,229,255,.18);
+
+}
+
+.about-text h3{
+
+font-size:20px;
+margin-bottom:20px;
+color:var(--gold);
+align-items:center;
+
+}
+
+.about-text p{
+
+color:var(--text);
+
+line-height:1.8;
+
+margin-bottom:20px;
+
+}
+/* GALLERY */
+
+.gallery{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(400px,1fr));
+
+gap:22px;
+
+}
+
+.gallery img{
+
+width:100%;
+
+height:330px;
+
+object-fit:cover;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.45s;
+
+}
+
+.gallery img:hover{
+
+transform:scale(1.04);
+
+box-shadow:0 20px 35px rgba(0,229,255,.25);
+
+}
+/* BEFORE & AFTER */
+
+.beforeafter{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(340px,1fr));
+gap:25px;
+
+}
+
+.compare h3{
+
+margin-bottom:18px;
+font-size:20px;
+color:var(--gold);
+
+}
+
+.compare-images{
+
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:12px;
+
+}
+
+.compare img{
+
+width:100%;
+height:260px;
+object-fit:cover;
+border-radius:14px;
+cursor:pointer;
+
+}
+
+/* SERVICES */
+
+.cards{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:22px;
+
+}
+
+.card h3{
+
+margin-bottom:12px;
+color:var(--gold);
+
+}
+
+.card p{
+
+color:var(--text);
+line-height:1.8;
+
+}
+
+/* CONTACT */
+
+.contact-container{
+
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+gap:20px;
+
+}
+
+.contact-card{
+
+text-align:center;
+
+}
+
+.contact-card h3{
+
+margin-bottom:10px;
+color:var(--gold);
+
+}
+
+.contact-card p{
+
+color:var(--text);
+
+}
+
+.contact-card a{
+
+text-decoration:none;
+color:white;
+
+}
+
+.contact-btns{
+
+display:flex;
+justify-content:center;
+gap:18px;
+flex-wrap:wrap;
+
+margin-top:40px;
+
+}
+
+.contact-btn{
+
+padding:15px 30px;
+
+border-radius:50px;
+
+background:linear-gradient(135deg,#00E5FF,#0066ff);
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.contact-btn:hover{
+
+transform:translateY(-5px);
+
+box-shadow:0 10px 30px rgba(0,229,255,.4);
+
+}
+
+/* FOOTER */
+
+footer{
+
+margin-top:60px;
+
+padding:30px;
+
+text-align:center;
+
+background:#01040f;
+
+color:#94a3b8;
+
+}
+
+/* WHATSAPP */
+
+.whatsapp{
+
+position:fixed;
+
+right:20px;
+bottom:20px;
+
+padding:15px 20px;
+
+background:#25D366;
+
+color:white;
+
+text-decoration:none;
+
+font-weight:600;
+
+border-radius:50px;
+
+z-index:999;
+
+}
+
+/* LIGHTBOX */
+
+.lightbox{
+
+position:fixed;
+inset:0;
+
+background:rgba(0,0,0,.95);
+
+display:none;
+
+justify-content:center;
+align-items:center;
+
+z-index:9999;
+
+}
+
+.lightbox img{
+
+max-width:90%;
+max-height:90%;
+border-radius:16px;
+
+}
+
+/* MOBILE */
+
+@media(max-width:768px){
+
+header{
+
+padding:15px 20px;
+flex-direction:column;
+gap:12px;
+
+}
+
+.logo{
+
+font-size:26px;
+
+}
+
+nav{
+
+justify-content:center;
+flex-wrap:wrap;
+gap:15px;
+
+}
+
+section{
+
+padding:80px 20px;
+
+}
+
+.hero{
+
+min-height:85vh;
+
+}
+
+.hero h1{
+
+font-size:48px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.hero-stats{
+
+gap:25px;
+
+}
+
+.about-container{
+
+grid-template-columns:1fr;
+text-align:center;
+
+}
+
+.about-image{
+
+max-width:320px;
+margin:auto;
+
+}
+
+.gallery{
+
+grid-template-columns:1fr;
+
+}
+
+.compare-images{
+
+grid-template-columns:1fr;
+
+}
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+<div class="logo">
+
+VALMIKI ANJI
+
+</div>
+
+<nav>
+
+<a href="#home">Home</a>
+
+<a href="#about">About</a>
+
+<a href="#photography">Photography</a>
+
+<a href="#ai-gallery">AIgallery</a>
+
+<a href="#beforeafter">Before&After</a>
+
+<a href="#services">Services</a>
+
+<a href="#contact">Contact</a>
+
+</nav>
+
+</header>
+
+<!-- HERO -->
+
+<section class="hero" id="home">
+
+<div class="hero-content">
+
+<h1>
+
+<span>Photography</span><br>
+
+& AI Photo Editing
+
+</h1>
+
+<p>
+
+Hi, I'm <strong>Valmiki Anji</strong>, a passionate photographer and AI photo editor dedicated to creating cinematic portraits, premium retouching, creative AI edits, and professional color grading. Every image tells a story, and my mission is to make yours unforgettable.
+
+</p>
+
+<div class="hero-buttons">
+
+<a href="#photography" class="btn-primary">
+
+View Portfolio
+
+</a>
+
+<a href="#contact" class="btn-secondary">
+
+Hire Me
+
+</a>
+
+</div>
+
+<div class="hero-stats">
+
+<div class="stat">
+
+<h2>0</h2>
+
+<p>Projects</p>
+
+</div>
+
+<div class="stat">
+
+<h2>0+</h2>
+
+<p>Happy Clients</p>
+
+</div>
+
+<div class="stat">
+
+<h2>0+</h2>
+
+<p>Years Experience</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ABOUT -->
+
+<section id="about">
+
+<h2 class="title">
+
+About Me
+
+</h2>
+
+<div class="about-container">
+
+<div class="about-image">
+
+<img src="photo1.jpg" alt="Valmiki Anji">
+
+</div>
+
+<div class="about-text">
+
+<h3>
+
+Professional Photographer & AI Photo Editor
+
+</h3>
+
+<p>
+
+Hello! I'm <strong>Valmiki Anji</strong>, a passionate photographer and AI photo editor who combines creativity with modern technology to produce visually stunning images.
+
+</p>
+
+<p>
+
+I specialize in portrait photography, cinematic color grading, AI-powered enhancements, natural skin retouching, object removal, creative background replacement, wedding edits, and professional photo manipulation.
+
+</p>
+
+<p>
+
+Every project receives careful attention to detail, ensuring that each photograph looks natural, vibrant, and emotionally impactful while preserving the original memories.
+
+</p>
+
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= PHOTOGRAPHY GALLERY ================= -->
+
+<section id="photography">
+
+<h2 class="title">
+Photography Gallery
+</h2>
+
+<div class="gallery">
+
+<img src="photo2.jpg" alt="Photography">
+
+<img src="photo3.jpeg" alt="Photography">
+
+<img src="photo4.jpg" alt="Photography">
+
+<img src="photo5.jpg" alt="Photography">
+
+<img src="photo6.jpg" alt="Photography">
+
+<img src="photo7.webp" alt="Photography">
+
+</div>
+
+</section>
+
+<!-- ================= AI GALLERY ================= -->
+
+<section id="ai-gallery">
+
+<h2 class="title">
+AI Photo Gallery
+</h2>
+
+<p style="text-align:center;max-width:800px;margin:0 auto 40px;color:#cbd5e1;line-height:1.8;">
+
+Experience the power of Artificial Intelligence in professional photo editing. From cinematic color grading and realistic background replacement to premium retouching and creative visual transformations, every image showcases the possibilities of modern AI-assisted editing while maintaining natural details.
+
+</p>
+
+<div class="gallery">
+
+<img src="AI-1.png" alt="AI Edit">
+
+<img src="AI-2.png" alt="AI Edit">
+
+<img src="AI-3.png" alt="AI Edit">
+
+<img src="AI-4.webp" alt="AI Edit">
+
+<img src="AI-5.png" alt="AI Edit">
+
+<img src="AI-6.png" alt="AI Edit">
+
+</div>
+
+<div style="margin-top:50px;">
+
+<div class="cards">
+
+<div class="card">
+
+<h3>🎨 AI Retouching</h3>
+
+<p>
+Professional natural skin enhancement, blemish removal, facial cleanup, and high-end portrait finishing while preserving realistic details.
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>✨ Creative AI Effects</h3>
+
+<p>
+Creative background replacement, artistic transformations, object removal, and visually engaging AI-powered edits for social media and personal projects.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= BEFORE & AFTER ================= -->
+
+<section id="beforeafter">
+
+<h2 class="title">Before & After Editing</h2>
+
+<p style="text-align:center;max-width:850px;margin:0 auto 45px;color:#cbd5e1;line-height:1.8;">
+
+See how professional editing transforms ordinary photographs into stunning works of art. Every edit focuses on preserving natural beauty while enhancing lighting, colors, skin tones, and overall visual impact.
+
+</p>
+
+<div class="beforeafter">
+
+<div class="compare">
+
+<h3>Portrait Enhancement</h3>
+
+<div class="compare-images">
+
+<img src="before1.jpg" alt="Before">
+
+<img src="after1.jpg" alt="After">
+
+</div>
+
+</div>
+
+<div class="compare">
+
+<h3>Cinematic Color Grade</h3>
+
+<div class="compare-images">
+
+<img src="before2.jpg" alt="Before">
+
+<img src="after2.jpg" alt="After">
+
+</div>
+
+</div>
+
+<div class="compare">
+
+<h3>AI Background Transformation</h3>
+
+<div class="compare-images">
+
+<img src="before3.jpg" alt="Before">
+
+<img src="after3.jpg" alt="After">
+
+</div>
+
+</div>
+
+<div class="compare">
+
+<h3>Premium Retouch</h3>
+
+<div class="compare-images">
+
+<img src="before4.jpeg" alt="Before">
+
+<img src="after4.jpg" alt="After">
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ================= SERVICES ================= -->
+
+<section id="services">
+
+<h2 class="title">My Services</h2>
+
+<p style="text-align:center;max-width:850px;margin:0 auto 50px;color:#cbd5e1;line-height:1.8;">
+
+I provide professional photography and AI-powered editing services for individuals, creators, brands, and businesses. Every project is carefully crafted to deliver premium-quality results.
+
+</p>
+
+<div class="cards">
+
+<div class="card">
+
+<h3>📸 Portrait Photography</h3>
+
+<p>
+
+Professional indoor and outdoor portrait sessions with cinematic lighting and premium-quality edits.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🤖 AI Photo Editing</h3>
+
+<p>
+
+Natural AI enhancement, advanced skin retouching, object removal, and intelligent photo restoration.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🎨 Cinematic Color Grading</h3>
+
+<p>
+
+Professional color correction and cinematic grading that gives every image a premium, film-inspired appearance.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🌄 Background Replacement</h3>
+
+<p>
+
+Creative AI-powered background replacement with realistic lighting and seamless blending.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>✨ Wedding & Event Editing</h3>
+
+<p>
+
+Beautiful enhancements for wedding, engagement, birthday, and event photography with elegant finishing.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>📱 Social Media Content</h3>
+
+<p>
+
+Instagram-ready edits, reels thumbnails, profile photos, posters, and eye-catching content optimized for social media.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🖼️ Photo Restoration</h3>
+
+<p>
+
+Restore damaged, faded, or old photographs while preserving precious memories with modern AI technology.
+
+</p>
+
+</div>
+
+<div class="card">
+
+<h3>🚀 Custom Creative Projects</h3>
+
+<p>
+
+Personalized editing, fantasy artwork, cinematic composites, promotional graphics, and creative visual storytelling.
+
+</p>
+
+</div>
+
+</div>
+
+</section>
+<!-- ================= CONTACT ================= -->
+
+<section id="contact">
+
+<h2 class="title">Let's Work Together</h2>
+
+<p style="text-align:center;max-width:850px;margin:0 auto 50px;color:#cbd5e1;line-height:1.8;">
+
+Whether you're looking for professional photography, AI-powered photo editing, cinematic retouching, or creative visual content, I'd love to bring your ideas to life. Feel free to reach out for collaborations, bookings, or custom editing projects.
+
+</p>
+
+<div class="contact-container">
+
+<div class="contact-card">
+
+<h3>📞 Phone</h3>
+
+<p>
+<a href="tel:+919381651511">
++91 9381651511
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>📧 Email</h3>
+
+<p>
+<a href="mailto:valmikianji854@gmail.com">
+valmikianji854@gmail.com
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>📸 Instagram</h3>
+
+<p>
+<a href="https://instagram.com/Valmiki_anji__22" target="_blank">
+@Valmiki_anji__22
+</a>
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>💬 WhatsApp</h3>
+
+<p>
+<a href="https://wa.me/919381651511" target="_blank">
+Chat on WhatsApp
+</a>
+</p>
+
+</div>
+
+
+</section>
+
+
+<!-- FOOTER -->
+
+<footer>
+
+<h2 style="margin-bottom:10px;">
+
+VALMIKI ANJI
+
+</h2>
+
+<p style="max-width:700px;margin:auto;line-height:1.8;">
+
+Professional Photography & AI Photo Editing Portfolio.
+Capturing emotions, enhancing memories, and creating premium visual experiences through photography and AI-powered editing.
+
+</p>
+
+<div style="margin:30px 0;">
+
+<a href="#home" style="color:white;text-decoration:none;margin:0 15px;">Home</a>
+
+<a href="#about" style="color:white;text-decoration:none;margin:0 15px;">About</a>
+
+<a href="#photography" style="color:white;text-decoration:none;margin:0 15px;">Portfolio</a>
+
+<a href="#services" style="color:white;text-decoration:none;margin:0 15px;">Services</a>
+
+<a href="#contact" style="color:white;text-decoration:none;margin:0 15px;">Contact</a>
+
+</div>
+
+<p style="margin-top:20px;color:#94a3b8;">
+
+© 2026 Valmiki Anji • All Rights Reserved
+
+</p>
+
+</footer>
+
+<!-- LIGHTBOX -->
+
+<div class="lightbox" id="lightbox">
+
+<img id="lightbox-img" src="" alt="Preview">
+
+</div>
+<script>
+
+// =========================
+// LIGHTBOX
+// =========================
+
+const images = document.querySelectorAll(
+'.gallery img, .compare img'
+);
+
+const lightbox =
+document.getElementById('lightbox');
+
+const lightboxImg =
+document.getElementById('lightbox-img');
+
+images.forEach(image=>{
+
+image.addEventListener('click',()=>{
+
+lightbox.style.display='flex';
+
+lightboxImg.src=image.src;
+
+});
+
+});
+
+lightbox.addEventListener('click',()=>{
+
+lightbox.style.display='none';
+
+});
+
+// =========================
+// ACTIVE NAVIGATION
+// =========================
+
+const sections=document.querySelectorAll("section");
+
+const navLinks=document.querySelectorAll("nav a");
+
+window.addEventListener("scroll",()=>{
+
+let current="";
+
+sections.forEach(section=>{
+
+const sectionTop=section.offsetTop-120;
+
+const sectionHeight=section.offsetHeight;
+
+if(pageYOffset>=sectionTop){
+
+current=section.getAttribute("id");
+
+}
+
+});
+
+navLinks.forEach(link=>{
+
+link.classList.remove("active");
+
+if(link.getAttribute("href")==="#"+current){
+
+link.classList.add("active");
+
+}
+
+});
+
+});
+
+// =========================
+// FADE-IN ANIMATION
+// =========================
+
+const observer=new IntersectionObserver((entries)=>{
+
+entries.forEach(entry=>{
+
+if(entry.isIntersecting){
+
+entry.target.animate([
+
+{
+opacity:0,
+transform:"translateY(40px)"
+},
+
+{
+opacity:1,
+transform:"translateY(0)"
+}
+
+],{
+
+duration:700,
+fill:"forwards",
+easing:"ease"
+
+});
+
+observer.unobserve(entry.target);
+
+}
+
+});
+
+});
+
+document.querySelectorAll(
+
+".card,.gallery img,.compare,.contact-card,.stat"
+
+).forEach(el=>observer.observe(el));
+
+// =========================
+// CURRENT YEAR
+// =========================
+
+const footer=document.querySelector("footer p:last-child");
+
+if(footer){
+
+footer.innerHTML="© "+new Date().getFullYear()+" Valmiki Anji • All Rights Reserved";
+
+}
+
+</script>
+
+</body>
+</html>
